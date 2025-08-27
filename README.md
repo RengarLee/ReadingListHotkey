@@ -13,9 +13,9 @@ A simple Chrome extension that lets you quickly add the current page to Chrome's
 
 ## Default Shortcuts
 
-*   **Add to Reading List**: `Ctrl+Shift+A`
-*   **Remove from Reading List**: `Ctrl+Shift+D`
-*   **Mark as Read**: `Ctrl+Shift+R`
+*   **Add to Reading List**: `Ctrl+M`
+*   **Remove from Reading List**: `Ctrl+.`
+*   **Mark as Read**: `Ctrl+,`
 *   On Mac, use **Command** instead of **Ctrl**.
 
 ## Installation
@@ -29,9 +29,9 @@ A simple Chrome extension that lets you quickly add the current page to Chrome's
 
 ## How to Use
 
-*   **To Add a Page:** Navigate to the page and press `Ctrl+Shift+A`.
-*   **To Remove a Page:** Navigate to a page that is already in your reading list and press `Ctrl+Shift+D`.
-*   **To Mark a Page as Read:** Navigate to an unread page in your reading list and press `Ctrl+Shift+R`.
+*   **To Add a Page:** Navigate to the page and press `Ctrl+M`.
+*   **To Remove a Page:** Navigate to a page that is already in your reading list and press `Ctrl+.`.
+*   **To Mark a Page as Read:** Navigate to an unread page in your reading list and press `Ctrl+,`.
 
 ## Customizing the Shortcut
 

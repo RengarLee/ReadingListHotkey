@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Add to Reading List",
+  "version": "1.0",
+  "description": "Adds the current page to the reading list with a shortcut.",
+  "permissions": [
+    "readingList",
+    "tabs"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "add-to-reading-list": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+A",
+        "mac": "Command+Shift+A"
+      },
+      "description": "Add the current page to the reading list"
+    }
+  },
+  "options_page": "options.html",
+  "action": {
+    "default_title": "Add to Reading List"
+  }
+}

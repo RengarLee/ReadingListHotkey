@@ -8,6 +8,17 @@
     "tabs",
     "notifications"
   ],
+  "web_accessible_resources": [
+    {
+      "resources": ["icon.png"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
   "background": {
     "service_worker": "background.js"
   },
@@ -36,6 +47,7 @@
   },
   "options_page": "options.html",
   "action": {
-    "default_title": "Add to Reading List"
+    "default_title": "Add to Reading List",
+    "default_icon": "icon.png"
   }
 }

@@ -10,10 +10,17 @@ A simple Chrome extension that lets you quickly add the current page to Chrome's
 
 ### Features
 
-*   Add the current tab to your reading list with a customizable keyboard shortcut.
-*   **Default Shortcut**:
-    *   Windows/Linux: `Ctrl+Shift+A`
-    *   Mac: `Command+Shift+A`
+*   **Add** the current page to your reading list.
+*   **Remove** the current page from your reading list.
+*   **Mark** the current page as "read" in your reading list.
+*   All actions are triggered by customizable keyboard shortcuts.
+
+### Default Shortcuts
+
+*   **Add to Reading List**: `Ctrl+Shift+A`
+*   **Remove from Reading List**: `Ctrl+Shift+D`
+*   **Mark as Read**: `Ctrl+Shift+R`
+*   On Mac, use **Command** instead of **Ctrl**.
 
 ### Installation
 
@@ -26,9 +33,9 @@ A simple Chrome extension that lets you quickly add the current page to Chrome's
 
 ### How to Use
 
-1.  Navigate to any web page you want to save for later reading.
-2.  Press the keyboard shortcut (default is `Ctrl+Shift+A` or `Command+Shift+A`).
-3.  The current page will be added to your Chrome Reading List. You can view your reading list in the browser's side panel.
+*   **To Add a Page:** Navigate to the page and press `Ctrl+Shift+A`.
+*   **To Remove a Page:** Navigate to a page that is already in your reading list and press `Ctrl+Shift+D`.
+*   **To Mark a Page as Read:** Navigate to an unread page in your reading list and press `Ctrl+Shift+R`.
 
 ### Customizing the Shortcut
 
@@ -44,10 +51,17 @@ A simple Chrome extension that lets you quickly add the current page to Chrome's
 
 ### 功能
 
-*   使用可自定义的键盘快捷键将当前标签页添加到您的阅读清单。
-*   默认快捷键:
-    *   Windows/Linux: `Ctrl+Shift+A`
-    *   Mac: `Command+Shift+A`
+*   **添加** 当前页面到您的阅读清单。
+*   **移除** 当前页面从您的阅读清单。
+*   **标记** 当前页面为“已读”。
+*   所有操作都通过可自定义的键盘快捷键触发。
+
+### 默认快捷键
+
+*   **添加到阅读清单**: `Ctrl+Shift+A`
+*   **从阅读清单中删除**: `Ctrl+Shift+D`
+*   **标记为已读**: `Ctrl+Shift+R`
+*   在 Mac 上, 请使用 **Command** 代替 **Ctrl**。
 
 ### 安装
 
@@ -60,9 +74,9 @@ A simple Chrome extension that lets you quickly add the current page to Chrome's
 
 ### 如何使用
 
-1.  浏览到您想要保存以供日后阅读的任何网页。
-2.  按下键盘快捷键 (默认为 `Ctrl+Shift+A` 或 `Command+Shift+A`)。
-3.  当前页面将被添加到您的 Chrome 阅读清单中。您可以在浏览器侧边栏中查看您的阅读清单。
+*   **添加页面**: 浏览到该页面并按下 `Ctrl+Shift+A`。
+*   **删除页面**: 浏览到已在您阅读列表中的页面，然后按下 `Ctrl+Shift+D`。
+*   **标记为已读**: 浏览到您阅读列表中未读的页面，然后按下 `Ctrl+Shift+R`。
 
 ### 自定义快捷键
 

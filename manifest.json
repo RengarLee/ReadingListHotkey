@@ -6,7 +6,7 @@
   "permissions": [
     "readingList",
     "tabs",
-    "notifications"
+    "activeTab"
   ],
   "web_accessible_resources": [
     {
@@ -22,6 +22,13 @@
   "background": {
     "service_worker": "background.js"
   },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
   "commands": {
     "add-to-reading-list": {
       "suggested_key": {

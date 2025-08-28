@@ -31,16 +31,6 @@ function showNotification(title, message, type = 'info', operation = '') {
     });
 }
 
-// Add action listener to test notifications directly when clicking the extension icon
-chrome.action.onClicked.addListener((tab) => {
-  console.log("Extension icon clicked, showing test notification");
-  // 不要使用async函数，因为可能导致通道关闭问题
-  showNotification("Test Notification", "This is a test notification from the Reading List extension.", "info", "test");
-  
-  // 在控制台打印一条消息，确认代码执行
-  console.log("Test notification triggered");
-});
-
 // Make the command listener non-async to avoid message channel closing issues
 chrome.commands.onCommand.addListener((command) => {
   console.log(`Command received: ${command}`);
@@ -50,13 +40,12 @@ chrome.commands.onCommand.addListener((command) => {
     .then(tabs => {
       if (!tabs || tabs.length === 0) {
         console.error("No active tabs found");
-        showNotification("Error", "No active tab found", "error");
         return;
       }
 
       const tab = tabs[0];
       if (!tab || !tab.url || !(tab.url.startsWith('http:') || tab.url.startsWith('https:'))) {
-        showNotification("Error", "This action cannot be performed on the current page.", "error");
+        console.log("This action cannot be performed on the current page.");
         return;
       }
 
@@ -76,7 +65,6 @@ chrome.commands.onCommand.addListener((command) => {
             })
             .catch(err => {
               console.error("Error adding to reading list:", err);
-              showNotification("Error", `Failed to add "${title}" to reading list.`, "error", "add");
             });
           break;
         case "remove-from-reading-list":
@@ -87,7 +75,6 @@ chrome.commands.onCommand.addListener((command) => {
             })
             .catch(err => {
               console.error("Error removing from reading list:", err);
-              showNotification("Error", `Failed to remove "${title}" from reading list.`, "error", "remove");
             });
           break;
         case "mark-as-read":
@@ -98,7 +85,6 @@ chrome.commands.onCommand.addListener((command) => {
             })
             .catch(err => {
               console.error("Error marking as read:", err);
-              showNotification("Error", `Failed to mark "${title}" as read.`, "error", "read");
             });
           break;
         default:
@@ -110,15 +96,5 @@ chrome.commands.onCommand.addListener((command) => {
     .catch(error => {
       // 错误处理
       console.error(`Error processing command ${command}:`, error);
-      showNotification("Error", "Failed to process command: " + command, "error");
     });
-});
-
-// 处理来自content script的消息
-chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-  if (request.action === 'openReadingList') {
-    // 打开Chrome的阅读列表页面
-    chrome.tabs.create({ url: 'chrome://reading-list/' });
-    sendResponse({ success: true });
-  }
 });

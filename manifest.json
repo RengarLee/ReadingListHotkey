@@ -10,7 +10,7 @@
   ],
   "web_accessible_resources": [
     {
-      "resources": ["icon.png"],
+      "resources": ["icon.png", "notification.css"],
       "matches": ["<all_urls>"]
     }
   ],

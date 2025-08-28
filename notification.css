@@ -1,9 +1,9 @@
 /* 阅读列表通知样式 */
 .notification {
     position: fixed;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%) translateY(-10px);
+    bottom: 20px;
+    right: 20px;
+    transform: translateY(10px);
     z-index: 999999;
     background: #1d3558;
     color: white;
@@ -22,12 +22,12 @@
 
 .notification.show {
     opacity: 1;
-    transform: translateX(-50%) translateY(0);
+    transform: translateY(0);
 }
 
 .notification.hide {
     opacity: 0;
-    transform: translateX(-50%) translateY(-10px);
+    transform: translateY(10px);
 }
 
 .notification .content {

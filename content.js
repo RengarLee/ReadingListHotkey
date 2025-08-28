@@ -1,10 +1,10 @@
-// 现代化自定义通知系统
+// Modern custom notification system
 class CustomNotification {
     constructor() {
         this.loadStyles();
     }
 
-    // 加载外部CSS文件
+    // Load external CSS file
     loadStyles() {
         if (document.getElementById('notification-styles')) return;
 
@@ -16,23 +16,23 @@ class CustomNotification {
         document.head.appendChild(link);
     }
 
-    // 显示通知
+    // Show notification
     show(title, message, actions = []) {
         const notification = this.createElement(message, actions);
         document.body.appendChild(notification);
         
-        // 使用 requestAnimationFrame 确保动画触发
+        // Use requestAnimationFrame to ensure animation triggers
         requestAnimationFrame(() => {
             notification.classList.add('show');
         });
 
-        // 2秒后自动隐藏
+        // Auto-hide after 2 seconds
         setTimeout(() => this.hide(notification), 2000);
         
         return notification;
     }
 
-    // 创建通知元素 - 使用模板字符串，简洁优雅
+    // Create notification element - using template strings for elegance
     createElement(message, actions) {
         const actionsHtml = actions.length > 0 ? 
             `<div class="actions">${actions.map(action => 
@@ -58,13 +58,13 @@ class CustomNotification {
         return this.createElementFromHTML(`<div class="notification">${template}</div>`, actions);
     }
 
-    // 从 HTML 字符串创建元素并绑定事件
+    // Create element from HTML string and bind events
     createElementFromHTML(htmlString, actions) {
         const div = document.createElement('div');
         div.innerHTML = htmlString;
         const element = div.firstElementChild;
 
-        // 事件委托 - 更优雅的事件处理
+        // Event delegation - more elegant event handling
         element.addEventListener('click', (e) => {
             if (e.target.classList.contains('close-btn')) {
                 this.hide(element);
@@ -79,20 +79,20 @@ class CustomNotification {
         return element;
     }
 
-    // 隐藏通知
+    // Hide notification
     hide(container) {
         container.classList.add('hide');
         setTimeout(() => container.remove(), 300);
     }
 }
 
-// 创建全局通知实例
+// Create global notification instance
 const customNotification = new CustomNotification();
 
-// 监听来自background script的消息
+// Listen for messages from background script
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     if (request.action === 'showCustomNotification') {
-        // 根据操作类型显示不同的消息
+        // Display different messages based on operation type
         const messages = {
             add: 'URL added to reading list',
             remove: 'URL removed from reading list', 

@@ -1,13 +1,13 @@
 // Helper function to show a custom notification
 function showNotification(title, message, type = 'info', operation = '') {
-  // 查询当前活动的标签页
+  // Query current active tab
   chrome.tabs.query({ active: true, currentWindow: true })
     .then(tabs => {
       if (tabs && tabs.length > 0) {
         const tab = tabs[0];
-        // 只在http/https页面显示自定义通知
+        // Only show custom notifications on http/https pages
         if (tab.url && (tab.url.startsWith('http:') || tab.url.startsWith('https:'))) {
-          // 发送消息给content script显示自定义通知
+          // Send message to content script to display custom notification
           chrome.tabs.sendMessage(tab.id, {
             action: 'showCustomNotification',
             title: title,
@@ -18,7 +18,7 @@ function showNotification(title, message, type = 'info', operation = '') {
             console.log(`${title}: ${message}`);
           });
         } else {
-          // 对于非http/https页面，使用控制台输出
+          // For non-http/https pages, use console output
           console.log(`${title}: ${message}`);
         }
       } else {
@@ -35,7 +35,7 @@ function showNotification(title, message, type = 'info', operation = '') {
 chrome.commands.onCommand.addListener((command) => {
   console.log(`Command received: ${command}`);
   
-  // 使用Promise而不是await
+  // Use Promise instead of await
   chrome.tabs.query({ active: true, currentWindow: true })
     .then(tabs => {
       if (!tabs || tabs.length === 0) {
@@ -56,11 +56,11 @@ chrome.commands.onCommand.addListener((command) => {
       
       switch (command) {
         case "add-to-reading-list":
-          // 使用Promise链式处理，避免await可能引起的问题
+          // Use Promise chaining to avoid potential issues with await
           chrome.readingList.addEntry({ url: url, title: title, hasBeenRead: false })
             .then(() => {
               console.log("Added to reading list successfully");
-              // 通知放在回调里，确保操作完成后再显示
+              // Show notification in callback to ensure operation completes first
               showNotification("Success", `"${title}" was added to your reading list.`, "success", "add");
             })
             .catch(err => {
@@ -94,7 +94,7 @@ chrome.commands.onCommand.addListener((command) => {
       }
     })
     .catch(error => {
-      // 错误处理
+      // Error handling
       console.error(`Error processing command ${command}:`, error);
     });
 });

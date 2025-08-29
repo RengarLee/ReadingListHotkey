@@ -6,11 +6,29 @@
   "permissions": [
     "readingList",
     "tabs",
-    "notifications"
+    "activeTab"
   ],
+  "web_accessible_resources": [
+    {
+      "resources": ["icon.png", "notification.css"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
   "background": {
     "service_worker": "background.js"
   },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
   "commands": {
     "add-to-reading-list": {
       "suggested_key": {
@@ -36,6 +54,7 @@
   },
   "options_page": "options.html",
   "action": {
-    "default_title": "Add to Reading List"
+    "default_title": "Add to Reading List",
+    "default_icon": "icon.png"
   }
 }

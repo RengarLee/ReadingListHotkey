@@ -18,4 +18,4 @@ This extension does not store any user data. All data is transient and is used o
 
 ---
 
-This policy is effective as of [YYYY-MM-DD].
+This policy is effective as of 2025-08-30.

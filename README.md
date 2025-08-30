@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="icon.png" width="128" height="128" alt="Reading List Hotkey Icon">
+</p>
+
 [Read this in Chinese (中文)](README.zh-CN.md)
 
 # Add to Reading List
@@ -20,7 +24,7 @@ A simple Chrome extension that lets you quickly add the current page to Chrome's
 
 ## Installation
 
-1.  Download all the files in this repository (`manifest.json`, `background.js`, `options.html`) and place them in a single folder on your computer.
+1.  Download all the files in this repository (`manifest.json`, `background.js`, `options.html`, `icon.png`, `content.js`, `notification.css`) and place them in a single folder on your computer.
 2.  Open the Chrome browser and navigate to `chrome://extensions`.
 3.  Enable the "Developer mode" switch in the top right corner.
 4.  Click the "Load unpacked" button.
@@ -38,3 +42,13 @@ A simple Chrome extension that lets you quickly add the current page to Chrome's
 1.  In your Chrome browser, navigate to `chrome://extensions/shortcuts`.
 2.  Find the "Add to Reading List" extension.
 3.  Click the edit (pencil) icon next to the shortcut and enter your new preferred key combination.
+
+## About the Icon
+
+The extension uses a custom icon (`icon.png`) that visually represents the Reading List functionality. The icon appears in:
+
+* The Chrome extensions toolbar
+* Extension management page
+* Notifications when actions are performed
+
+You can recognize the extension by this icon in your browser toolbar.

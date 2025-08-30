@@ -26,7 +26,7 @@ function showNotification(title, message, type = 'info', operation = '') {
       }
     })
     .catch(err => {
-      console.error('Error querying tabs:', err);
+      console.info('Error querying tabs:', err);
       console.log(`${title}: ${message}`);
     });
 }
@@ -39,7 +39,7 @@ chrome.commands.onCommand.addListener((command) => {
   chrome.tabs.query({ active: true, currentWindow: true })
     .then(tabs => {
       if (!tabs || tabs.length === 0) {
-        console.error("No active tabs found");
+        console.info("No active tabs found");
         return;
       }
 
@@ -64,7 +64,7 @@ chrome.commands.onCommand.addListener((command) => {
               showNotification("Success", `"${title}" was added to your reading list.`, "success", "add");
             })
             .catch(err => {
-              console.error("Error adding to reading list:", err);
+              console.info("Error adding to reading list:", err);
             });
           break;
         case "remove-from-reading-list":
@@ -74,7 +74,7 @@ chrome.commands.onCommand.addListener((command) => {
               showNotification("Success", `"${title}" was removed from your reading list.`, "success", "remove");
             })
             .catch(err => {
-              console.error("Error removing from reading list:", err);
+              console.info("Error removing from reading list:", err);
             });
           break;
         case "mark-as-read":
@@ -84,7 +84,7 @@ chrome.commands.onCommand.addListener((command) => {
               showNotification("Success", `"${title}" was marked as read.`, "success", "read");
             })
             .catch(err => {
-              console.error("Error marking as read:", err);
+              console.info("Error marking as read:", err);
             });
           break;
         default:
@@ -95,6 +95,6 @@ chrome.commands.onCommand.addListener((command) => {
     })
     .catch(error => {
       // Error handling
-      console.error(`Error processing command ${command}:`, error);
+      console.info(`Error processing command ${command}:`, error);
     });
 });

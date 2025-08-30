@@ -16,10 +16,37 @@
   <p>
     To change the keyboard shortcut for this extension, you need to visit Chrome's extension shortcuts page.
   </p>
+  <h2>Usage Instructions</h2>
   <p>
-    Click the link below to go there directly:
-    <br>
-    <a href="chrome://extensions/shortcuts" target="_blank">chrome://extensions/shortcuts</a>
+    <strong>Add a page to Reading List:</strong> While viewing any webpage, press Ctrl+M (or Command+M on Mac)
+    to quickly add the current page to your Chrome Reading List.
   </p>
+  <p>
+    <strong>Remove a page from Reading List:</strong> While viewing a page that's already in your Reading List,
+    press Ctrl+. (or Command+. on Mac) to remove it.
+  </p>
+  <p>
+    <strong>Mark a page as read:</strong> If you have an unread page in your Reading List, press Ctrl+, 
+    (or Command+, on Mac) to mark it as read without removing it from the list.
+  </p>
+
+  <h2>Troubleshooting</h2>
+  <p>
+    If the default shortcuts don't work, they may conflict with other browser shortcuts or extensions.
+    You can customize them by visiting the Chrome extensions shortcuts page linked above.
+  </p>
+
+  <script>
+    // Handle the chrome:// URL which cannot be directly opened
+    document.addEventListener('DOMContentLoaded', function() {
+      const shortcutLink = document.querySelector('a[href^="chrome://"]');
+      if (shortcutLink) {
+        shortcutLink.addEventListener('click', function(e) {
+          e.preventDefault();
+          chrome.tabs.create({ url: 'chrome://extensions/shortcuts' });
+        });
+      }
+    });
+  </script>
 </body>
 </html>

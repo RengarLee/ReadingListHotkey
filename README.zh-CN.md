@@ -1,6 +1,28 @@
+<p align="center">
+  <img src="icon.png" width="128" height="128" alt="阅读清单快捷键图标">
+</p>
+
 [以英文阅读 (Read this in English)](README.md)
 
 # 添加到阅读清单 (Add to Reading List)
+
+1.  在您的 Chrome 浏览器中，导航到 `chrome://extensions/shortcuts`。
+2.  找到"添加到阅读清单"扩展程序。
+3.  点击快捷方式旁边的编辑（铅笔）图标，然后输入您喜欢的新快捷键组合。
+
+## 关于图标
+
+本扩展程序使用自定义图标 (`icon.png`)，视觉上代表了阅读清单的功能。该图标出现在：
+
+* Chrome 扩展工具栏
+* 扩展管理页面
+* 执行操作时的通知中
+
+您可以通过浏览器工具栏中的此图标识别此扩展程序。
+
+# 添加到阅读清单 (Add to Reading List)
+
+<img src="icon.png" width="128" height="128" alt="阅读清单快捷键图标" align="right">
 
 这是一个简单的 Chrome 扩展程序，可让您使用键盘快捷键将当前页面快速添加到 Chrome 的阅读清单中。
 
@@ -20,7 +42,7 @@
 
 ## 安装
 
-1.  下载此代码仓库中的所有文件 (`manifest.json`, `background.js`, `options.html`) 并将它们放在计算机上的一个文件夹中。
+1.  下载此代码仓库中的所有文件 (`manifest.json`, `background.js`, `options.html`, `icon.png`, `content.js`, `notification.css`) 并将它们放在计算机上的一个文件夹中。
 2.  打开 Chrome 浏览器并导航到 `chrome://extensions`。
 3.  打开右上角的“开发者模式”开关。
 4.  点击“加载已解压的扩展程序”按钮。

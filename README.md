@@ -4,6 +4,10 @@
 
 [Read this in Chinese (中文)](README.zh-CN.md)
 
+## Chrome Web Store
+
+[Add to Reading List on Chrome Web Store](https://chromewebstore.google.com/detail/add-to-reading-list/jocobpmmlobocfccfljmbfpmfdlgjfdo?authuser=0&hl=en)
+
 # Add to Reading List
 
 A simple Chrome extension that lets you quickly add the current page to Chrome's Reading List using a keyboard shortcut.

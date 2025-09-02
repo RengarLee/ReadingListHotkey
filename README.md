@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="icon.png" width="128" height="128" alt="Reading List Hotkey Icon">
+  <img src="128.png" width="128" height="128" alt="Reading List Hotkey Icon">
 </p>
 
 [Read this in Chinese (中文)](README.zh-CN.md)
@@ -24,7 +24,7 @@ A simple Chrome extension that lets you quickly add the current page to Chrome's
 
 ## Installation
 
-1.  Download all the files in this repository (`manifest.json`, `background.js`, `options.html`, `icon.png`, `content.js`, `notification.css`) and place them in a single folder on your computer.
+1.  Download all the files in this repository (`manifest.json`, `background.js`, `options.html`, `128.png`, `content.js`, `notification.css`) and place them in a single folder on your computer.
 2.  Open the Chrome browser and navigate to `chrome://extensions`.
 3.  Enable the "Developer mode" switch in the top right corner.
 4.  Click the "Load unpacked" button.
@@ -45,7 +45,7 @@ A simple Chrome extension that lets you quickly add the current page to Chrome's
 
 ## About the Icon
 
-The extension uses a custom icon (`icon.png`) that visually represents the Reading List functionality. The icon appears in:
+The extension uses a custom icon (`128.png`) that visually represents the Reading List functionality. The icon appears in:
 
 * The Chrome extensions toolbar
 * Extension management page

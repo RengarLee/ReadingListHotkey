@@ -52,7 +52,6 @@ class CustomNotification {
                 <span class="text">${message}</span>
             </div>
             ${actionsHtml}
-            <button class="close-btn">&times;</button>
         `;
 
         return this.createElementFromHTML(`<div class="notification">${template}</div>`, actions);

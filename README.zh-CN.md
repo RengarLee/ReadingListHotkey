@@ -4,6 +4,10 @@
 
 [以英文阅读 (Read this in English)](README.md)
 
+## Chrome 网上应用店
+
+[添加到阅读清单 - Chrome 网上应用店](https://chromewebstore.google.com/detail/add-to-reading-list/jocobpmmlobocfccfljmbfpmfdlgjfdo?authuser=0&hl=en)
+
 # 添加到阅读清单 (Add to Reading List)
 
 1.  在您的 Chrome 浏览器中，导航到 `chrome://extensions/shortcuts`。

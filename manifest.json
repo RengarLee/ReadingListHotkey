@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Add to Reading List",
-  "version": "1.0",
+  "version": "1.0.1",
   "description": "Adds the current page to the reading list with a shortcut.",
   "permissions": [
     "readingList",
@@ -10,14 +10,14 @@
   ],
   "web_accessible_resources": [
     {
-      "resources": ["icon.png", "notification.css"],
+  "resources": ["128.png", "notification.css"],
       "matches": ["<all_urls>"]
     }
   ],
   "icons": {
-    "16": "icon.png",
-    "48": "icon.png",
-    "128": "icon.png"
+  "16": "128.png",
+  "48": "128.png",
+  "128": "128.png"
   },
   "background": {
     "service_worker": "background.js"
@@ -55,6 +55,6 @@
   "options_page": "options.html",
   "action": {
     "default_title": "Add to Reading List",
-    "default_icon": "icon.png"
+  "default_icon": "128.png"
   }
 }
